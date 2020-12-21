@@ -1,0 +1,33 @@
+scoreboard players set RandomResult global 0
+execute if predicate ww:bit run scoreboard players add RandomResult global 1
+execute if predicate ww:bit run scoreboard players add RandomResult global 2
+execute if predicate ww:bit run scoreboard players add RandomResult global 4
+execute if predicate ww:bit run scoreboard players add RandomResult global 8
+execute if predicate ww:bit run scoreboard players add RandomResult global 16
+execute if predicate ww:bit run scoreboard players add RandomResult global 32
+execute if predicate ww:bit run scoreboard players add RandomResult global 64
+execute if predicate ww:bit run scoreboard players add RandomResult global 128
+execute if predicate ww:bit run scoreboard players add RandomResult global 256
+execute if predicate ww:bit run scoreboard players add RandomResult global 512
+execute if predicate ww:bit run scoreboard players add RandomResult global 1024
+execute if predicate ww:bit run scoreboard players add RandomResult global 2048
+execute if predicate ww:bit run scoreboard players add RandomResult global 4096
+execute if predicate ww:bit run scoreboard players add RandomResult global 8192
+execute if predicate ww:bit run scoreboard players add RandomResult global 16384
+execute if predicate ww:bit run scoreboard players add RandomResult global 32768
+execute if predicate ww:bit run scoreboard players add RandomResult global 65536
+execute if predicate ww:bit run scoreboard players add RandomResult global 131072
+execute if predicate ww:bit run scoreboard players add RandomResult global 262144
+execute if predicate ww:bit run scoreboard players add RandomResult global 524288
+execute if predicate ww:bit run scoreboard players add RandomResult global 1048576
+execute if predicate ww:bit run scoreboard players add RandomResult global 2097152
+execute if predicate ww:bit run scoreboard players add RandomResult global 4194304
+execute if predicate ww:bit run scoreboard players add RandomResult global 8388608
+execute if predicate ww:bit run scoreboard players add RandomResult global 16777216
+execute if predicate ww:bit run scoreboard players add RandomResult global 33554432
+execute if predicate ww:bit run scoreboard players add RandomResult global 67108864
+execute if predicate ww:bit run scoreboard players add RandomResult global 134217728
+execute if predicate ww:bit run scoreboard players add RandomResult global 268435456
+execute if predicate ww:bit run scoreboard players add RandomResult global 536870912
+execute if predicate ww:bit run scoreboard players add RandomResult global 1073741824
+scoreboard players operation RandomResult global %= MaxRandom global
