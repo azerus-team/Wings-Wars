@@ -13,6 +13,7 @@ clear @s enchanted_book{PowerII:1b} 1
 clear @s enchanted_book{Flame:1b} 1
 scoreboard players set @s fly 0
 scoreboard players set ArrowGiven game 0
+scoreboard players set @s arrowTimer 0
 execute if entity @s[gamemode=adventure] run function ww:game/max_arrow
 tp @s @e[tag=Spawn,sort=random,limit=1]
 execute if score FFA Settings matches 0 if score red game matches 1 if score yellow game matches 0 if score green game matches 0 if score blue game matches 0 run function ww:game/end_teams

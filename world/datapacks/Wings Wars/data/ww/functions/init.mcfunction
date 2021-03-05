@@ -1,3 +1,5 @@
+datapack disable vanilla
+
 difficulty peaceful
 defaultgamemode adventure
 gamerule announceAdvancements false

@@ -16,7 +16,6 @@ execute if score Ballistics Settings matches 0 as @e[type=arrow,tag=!NoGravity] 
 execute as @a[gamemode=adventure] store result score @s arrow run clear @s arrow 0
 execute as @a[gamemode=adventure] if score @s arrow < MaxArrows Settings run scoreboard players add @s arrowTimer 1
 execute as @a[gamemode=adventure] if score @s arrowTimer >= ArrowTime Settings run function ww:game/arrow
-execute as @a[gamemode=adventure] if score @s arrowTimer matches 1.. if score @s arrow >= MaxArrows Settings run scoreboard players add @s arrowTimer 1
 
 scoreboard players add @a[gamemode=adventure] fly 50
 execute as @a[gamemode=adventure] if score @s fly matches 50000.. run function ww:game/firework
