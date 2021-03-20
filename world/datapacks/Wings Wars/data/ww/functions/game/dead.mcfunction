@@ -5,6 +5,7 @@ execute if score Deathmatch game matches 1 run effect give @s[gamemode=adventure
 execute if score Deathmatch game matches 1 run scoreboard players set @s witherTimer 0
 effect give @s[gamemode=adventure] glowing 999999 255 true
 effect give @s[tag=protection4] resistance 999999 0 true
+effect give @s[tag=protection5] resistance 999999 0 true
 effect give @s saturation 999999 255 true
 clear @s firework_rocket
 clear @s arrow

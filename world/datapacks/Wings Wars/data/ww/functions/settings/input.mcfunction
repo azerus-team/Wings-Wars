@@ -8,4 +8,5 @@ execute if score input global matches 6 run function ww:settings/set/bonus_amoun
 execute if score input global matches 7 run function ww:settings/set/max_arrows
 execute if score input global matches 8 run function ww:settings/set/arrow_time
 execute if score input global matches 9 run function ww:settings/set/deathmatch_time
-scoreboard players set @s input -1
+scoreboard players reset @a input
+function ww:presets/check_presets

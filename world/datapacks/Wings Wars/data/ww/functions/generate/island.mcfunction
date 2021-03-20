@@ -28,6 +28,7 @@ execute at @e[tag=radius4] positioned ~-5.5 0 ~-5.5 run kill @e[tag=block,dx=10,
 execute at @e[tag=radius5] positioned ~-6.5 0 ~-6.5 run kill @e[tag=block,dx=12,dy=255,dz=12]
 execute at @e[tag=radius6] positioned ~-7.5 0 ~-7.5 run kill @e[tag=block,dx=14,dy=255,dz=14]
 execute at @e[tag=radius9] positioned ~-10.5 0 ~-10.5 run kill @e[tag=block,dx=20,dy=255,dz=20]
+execute at @e[tag=radius10] positioned ~-11.5 0 ~-11.5 run kill @e[tag=block,dx=22,dy=255,dz=22]
 kill @e[tag=radius]
 
 tellraw @a [{"score":{"name":"timer","objective":"generate"},"color":"dark_blue"},{"text":"% are generated","color":"aqua"}]

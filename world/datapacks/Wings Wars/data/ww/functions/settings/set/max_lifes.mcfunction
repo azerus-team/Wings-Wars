@@ -3,3 +3,4 @@ execute unless score input input matches 1..100 run tellraw @s {"text":"Must be 
 execute at @e[tag=MaxLifes] run setblock ^ ^ ^-1 cyan_concrete_powder
 data merge block -2 126 52 {Text1:'[{"text":"Maximum lifes - "},{"score":{"name":"MaxLifes","objective":"Settings"}}]'}
 data modify entity @e[tag=MaxLifes,limit=1] Item.tag.display.Name set from block -2 126 52 Text1
+execute if entity @s[type=player] if score input input matches 1..100 run tellraw @a [{"text":"[","color":"gray","italic":true},{"selector":"@s"},": Maximum lifes - ",{"score":{"name":"MaxLifes","objective":"Settings"}},"]"]

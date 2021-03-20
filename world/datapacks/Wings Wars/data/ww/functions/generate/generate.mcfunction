@@ -5,6 +5,6 @@ function ww:generate/clear
 data remove storage ww Types
 execute if score Nature type matches 1 run function ww:add/nature
 execute if score AncientCivilization type matches 1 run function ww:add/ancient_civilization
-execute store result score TypeAmount generate if data storage ww Types[]
+execute if score Spaceships type matches 1 run function ww:add/spaceships
 scoreboard players set timer generate 0
 scoreboard players set GameState global 1

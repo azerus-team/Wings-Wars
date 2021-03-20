@@ -68,8 +68,8 @@ scoreboard objectives setdisplay list lifes
 data merge block -11 113 28 {Text2:'{"text":"The Game","color":"white","underlined":true}',Text3:'{"text":"is started","color":"white","underlined":true}'}
 
 tellraw @a [{"text":"- Current Game Settings -"}]
-tellraw @a ["",{"text":"Lifes","color":"gold"},{"text":" - "},{"score":{"name":"Lifes","objective":"Settings"}}]
-tellraw @a ["",{"text":"Maximum "},{"text":"lifes","color":"gold"},{"text":" - "},{"score":{"name":"MaxLifes","objective":"Settings"}}]
+tellraw @a ["",{"text":"Lives","color":"gold"},{"text":" - "},{"score":{"name":"Lifes","objective":"Settings"}}]
+tellraw @a ["",{"text":"Maximum "},{"text":"lives","color":"gold"},{"text":" - "},{"score":{"name":"MaxLifes","objective":"Settings"}}]
 tellraw @a ["",{"text":"Bonuses","color":"green"},{"text":" appear in - "},{"score":{"name":"BonusTime","objective":"Settings"}},{"text":" - ticks"}]
 tellraw @a ["",{"text":"Bonuses","color":"green"},{"text":" disappear in - "},{"score":{"name":"BonusDisappearTime","objective":"Settings"}},{"text":" - ticks"}]
 tellraw @a ["",{"text":"Minimal "},{"text":"bonuses","color":"green"},{"text":" amount  - "},{"score":{"name":"BonusAmountMin","objective":"Settings"}}]

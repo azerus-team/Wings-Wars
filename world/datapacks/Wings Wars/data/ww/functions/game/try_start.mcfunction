@@ -21,7 +21,8 @@ execute if score FFA Settings matches 0 if score blue game matches 1 if score gr
 
 execute if score FFA Settings matches 1 if score players game matches 2.. run scoreboard players set canBeStarted game 1
 
-execute if score canBeStarted game matches 0 run tellraw @s {"text":"Not enough players!","color":"red"}
+execute if score canBeStarted game matches 0 if score FFA Settings matches 0 run tellraw @s {"text":"Not enough teams!","color":"red"}
+execute if score canBeStarted game matches 0 if score FFA Settings matches 1 run tellraw @s {"text":"Not enough players!","color":"red"}
 
 execute if score IsMapGenerated global matches 0 run scoreboard players set canBeStarted game 0
 execute if score IsMapGenerated global matches 0 run tellraw @a {"text":"No map is generated!","color":"red"}

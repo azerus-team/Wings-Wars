@@ -1,4 +1,4 @@
-scoreboard players add @a fly 50
+scoreboard players add @a fly 100
 execute as @a if score @s fly matches 50000.. run function ww:game/firework
 execute as @a run scoreboard players operation @s flyPercents = @s fly
 execute as @a run scoreboard players operation @s flyPercents /= Const500 global
@@ -16,28 +16,30 @@ execute positioned -95.0 0 -22.0 run scoreboard players set @a[dx=158,dy=255,dz=
 execute as @a[scores={zone=..139,dead=1..}] run function ww:lobby/zone
 
 
-execute as @e[tag=Lifes] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/lifes
-execute as @e[tag=MaxLifes] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/max_lifes
-execute as @e[tag=BonusTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_time
-execute as @e[tag=BonusDisappearTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_disappear_time
-execute as @e[tag=BonusAmountMin] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_amount_min
-execute as @e[tag=BonusAmountMax] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_amount_max
-execute as @e[tag=MaxArrows] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/max_arrows
-execute as @e[tag=ArrowTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/arrow_time
-execute as @e[tag=DeathmatchTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/deathmatch_time
-execute as @e[tag=Ballistics] unless data entity @s {ItemRotation:0b} if score Ballistics Settings matches 0 at @s run function ww:settings/enable/ballistics
-execute as @e[tag=Ballistics] unless data entity @s {ItemRotation:0b} if score Ballistics Settings matches 1 at @s run function ww:settings/disable/ballistics
-execute as @e[tag=HandCombat] unless data entity @s {ItemRotation:0b} if score HandCombat Settings matches 0 at @s run function ww:settings/enable/hand_combat
-execute as @e[tag=HandCombat] unless data entity @s {ItemRotation:0b} if score HandCombat Settings matches 1 at @s run function ww:settings/disable/hand_combat
-execute as @e[tag=FriendlyFire] unless data entity @s {ItemRotation:0b} if score FriendlyFire Settings matches 0 at @s run function ww:settings/enable/friendly_fire
-execute as @e[tag=FriendlyFire] unless data entity @s {ItemRotation:0b} if score FriendlyFire Settings matches 1 at @s run function ww:settings/disable/friendly_fire
-execute as @e[tag=FFA] unless data entity @s {ItemRotation:0b} if score FFA Settings matches 0 at @s run function ww:settings/enable/ffa
-execute as @e[tag=FFA] unless data entity @s {ItemRotation:0b} if score FFA Settings matches 1 at @s run function ww:settings/disable/ffa
+execute as @e[type=item_frame,tag=Lifes] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/lifes
+execute as @e[type=item_frame,tag=MaxLifes] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/max_lifes
+execute as @e[type=item_frame,tag=BonusTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_time
+execute as @e[type=item_frame,tag=BonusDisappearTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_disappear_time
+execute as @e[type=item_frame,tag=BonusAmountMin] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_amount_min
+execute as @e[type=item_frame,tag=BonusAmountMax] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/bonus_amount_max
+execute as @e[type=item_frame,tag=MaxArrows] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/max_arrows
+execute as @e[type=item_frame,tag=ArrowTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/arrow_time
+execute as @e[type=item_frame,tag=DeathmatchTime] unless data entity @s {ItemRotation:0b} at @s run function ww:settings/select/deathmatch_time
+execute as @e[type=item_frame,tag=Ballistics] unless data entity @s {ItemRotation:0b} if score Ballistics Settings matches 0 at @s run function ww:settings/enable/ballistics
+execute as @e[type=item_frame,tag=Ballistics] unless data entity @s {ItemRotation:0b} if score Ballistics Settings matches 1 at @s run function ww:settings/disable/ballistics
+execute as @e[type=item_frame,tag=HandCombat] unless data entity @s {ItemRotation:0b} if score HandCombat Settings matches 0 at @s run function ww:settings/enable/hand_combat
+execute as @e[type=item_frame,tag=HandCombat] unless data entity @s {ItemRotation:0b} if score HandCombat Settings matches 1 at @s run function ww:settings/disable/hand_combat
+execute as @e[type=item_frame,tag=FriendlyFire] unless data entity @s {ItemRotation:0b} if score FriendlyFire Settings matches 0 at @s run function ww:settings/enable/friendly_fire
+execute as @e[type=item_frame,tag=FriendlyFire] unless data entity @s {ItemRotation:0b} if score FriendlyFire Settings matches 1 at @s run function ww:settings/disable/friendly_fire
+execute as @e[type=item_frame,tag=FFA] unless data entity @s {ItemRotation:0b} if score FFA Settings matches 0 at @s run function ww:settings/enable/ffa
+execute as @e[type=item_frame,tag=FFA] unless data entity @s {ItemRotation:0b} if score FFA Settings matches 1 at @s run function ww:settings/disable/ffa
 
-execute as @e[tag=Nature] unless data entity @s {ItemRotation:0b} if score Nature type matches 0 at @s run function ww:types/enable/nature
-execute as @e[tag=Nature] unless data entity @s {ItemRotation:0b} if score Nature type matches 1 at @s run function ww:types/disable/nature
-execute as @e[tag=AncientCivilization] unless data entity @s {ItemRotation:0b} if score AncientCivilization type matches 0 at @s run function ww:types/enable/ancient_civilization
-execute as @e[tag=AncientCivilization] unless data entity @s {ItemRotation:0b} if score AncientCivilization type matches 1 at @s run function ww:types/disable/ancient_civilization
+execute as @e[type=item_frame,tag=Nature] unless data entity @s {ItemRotation:0b} if score Nature type matches 0 at @s run function ww:types/enable/nature
+execute as @e[type=item_frame,tag=Nature] unless data entity @s {ItemRotation:0b} if score Nature type matches 1 at @s run function ww:types/disable/nature
+execute as @e[type=item_frame,tag=AncientCivilization] unless data entity @s {ItemRotation:0b} if score AncientCivilization type matches 0 at @s run function ww:types/enable/ancient_civilization
+execute as @e[type=item_frame,tag=AncientCivilization] unless data entity @s {ItemRotation:0b} if score AncientCivilization type matches 1 at @s run function ww:types/disable/ancient_civilization
+execute as @e[type=item_frame,tag=Spaceships] unless data entity @s {ItemRotation:0b} if score Spaceships type matches 0 at @s run function ww:types/enable/spaceships
+execute as @e[type=item_frame,tag=Spaceships] unless data entity @s {ItemRotation:0b} if score Spaceships type matches 1 at @s run function ww:types/disable/spaceships
 
 execute as @e[type=item_frame,tag=AdditionalLife] unless data entity @s {ItemRotation:0b} if score AdditionalLife bonus matches 0 at @s run function ww:bonuses/enable/additional_life
 execute as @e[type=item_frame,tag=AdditionalLife] unless data entity @s {ItemRotation:0b} if score AdditionalLife bonus matches 1 at @s run function ww:bonuses/disable/additional_life
@@ -64,9 +66,9 @@ execute as @e[type=item_frame,tag=PowerII] unless data entity @s {ItemRotation:0
 execute as @e[type=item_frame,tag=Flame] unless data entity @s {ItemRotation:0b} if score Flame bonus matches 0 at @s run function ww:bonuses/enable/flame
 execute as @e[type=item_frame,tag=Flame] unless data entity @s {ItemRotation:0b} if score Flame bonus matches 1 at @s run function ww:bonuses/disable/flame
 
-execute as @e[tag=ResetSettings] unless data entity @s {ItemRotation:0b} at @s run function ww:reset/settings
-execute as @e[tag=ResetTypes] unless data entity @s {ItemRotation:0b} at @s run function ww:reset/types
-execute as @e[tag=ResetBonuses] unless data entity @s {ItemRotation:0b} at @s run function ww:reset/bonuses
+execute as @e[type=item_frame,tag=Classic] unless data entity @s {ItemRotation:0b} at @s run function ww:presets/classic
+execute as @e[type=item_frame,tag=RaceForLife] unless data entity @s {ItemRotation:0b} at @s run function ww:presets/race_for_life
+execute as @e[type=item_frame,tag=ValuableArrows] unless data entity @s {ItemRotation:0b} at @s run function ww:presets/valuable_arrows
 
 
 execute as @a[scores={input=0..}] run function ww:settings/input
