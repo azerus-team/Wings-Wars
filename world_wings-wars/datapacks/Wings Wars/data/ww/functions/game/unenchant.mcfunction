@@ -1,0 +1,2 @@
+execute if data entity @s {SelectedItem:{id:"minecraft:bow"}} run item replace entity @s weapon.mainhand with bow{Unbreakable:1}
+execute if data entity @s {Inventory:[{Slot:-106b,id:"minecraft:bow"}]} run item replace entity @s weapon.offhand with bow{Unbreakable:1}
